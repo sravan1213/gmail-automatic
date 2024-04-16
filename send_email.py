@@ -29,7 +29,7 @@ server.starttls()
 server.login(sender_email, sender_password)
 
 # Send the email
-for _ in range(email_count):
+for _ in range(int(email_count)):
     server.send_message(message)
 
 # Quit the server
