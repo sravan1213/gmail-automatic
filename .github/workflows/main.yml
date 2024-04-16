@@ -8,6 +8,7 @@ on:
 jobs:
   run_python_script:
     runs-on: ubuntu-latest
+    environment: prod
     env:
       SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
       SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
