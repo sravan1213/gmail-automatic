@@ -15,7 +15,6 @@ jobs:
       RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
       EMAIL_SUBJECT: ${{ secrets.EMAIL_SUBJECT }}
       EMAIL_BODY: ${{ secrets.EMAIL_BODY }}
-      TEST: "TEST_VALUE"
 
     steps:
       - name: Checkout repository
@@ -27,4 +26,4 @@ jobs:
           python-version: '3.x'
 
       - name: Run Python script
-        run: echo "$SENDER_EMAIL"
+        run: python send_email.py
