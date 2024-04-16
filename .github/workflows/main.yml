@@ -26,4 +26,4 @@ jobs:
           python-version: '3.x'
 
       - name: Run Python script
-        run: echo "$TEST"
+        run: echo "$SENDER_EMAIL"
