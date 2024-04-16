@@ -7,12 +7,12 @@ from email.mime.text import MIMEText
 smtp_server = 'smtp.gmail.com'
 smtp_port = 587  # TLS port
 sender_email = os.environ['SENDER_EMAIL']
-sender_password = os.environ['SENDER_EMAIL_PASSWORD']
+sender_password = os.environ['SENDER_PASSWORD']
 
 # Create a message
 message = MIMEMultipart()
 message['From'] = sender_email
-message['To'] = os.environ['RECEIPIENTS']
+message['To'] = os.environ['RECIPIENT_EMAIL']
 message['Subject'] = os.environ['EMAIL_SUBJECT']
 
 # Add body to email
