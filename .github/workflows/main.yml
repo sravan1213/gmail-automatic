@@ -15,6 +15,7 @@ jobs:
       RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
       EMAIL_SUBJECT: ${{ secrets.EMAIL_SUBJECT }}
       EMAIL_BODY: ${{ secrets.EMAIL_BODY }}
+      EMAIL_COUNT: ${{ secrets.EMAIL_COUNT }}
 
     steps:
       - name: Checkout repository

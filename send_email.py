@@ -15,6 +15,8 @@ message['From'] = sender_email
 message['To'] = os.environ['RECIPIENT_EMAIL']
 message['Subject'] = os.environ['EMAIL_SUBJECT']
 
+email_count = os.environ["EMAIL_COUNT"]
+
 # Add body to email
 body = os.environ['EMAIL_BODY']
 message.attach(MIMEText(body, 'plain'))
@@ -27,7 +29,7 @@ server.starttls()
 server.login(sender_email, sender_password)
 
 # Send the email
-for _ in range(10):
+for _ in range(email_count):
     server.send_message(message)
 
 # Quit the server
