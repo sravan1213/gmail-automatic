@@ -2,7 +2,7 @@ name: Python Script Every 5 Minutes
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Runs every minute
+    - cron: '*/5 * * * *'  # Runs every minute
   workflow_dispatch:
 
 jobs:
